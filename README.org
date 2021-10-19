@@ -1,0 +1,5 @@
+#+TITLE: BPF
+#+AUTHOR: Jose Perez
+#+EMAIL: jose.perez@vertilux.com
+
+Simple Batting Park Factor calculator for the Cuban National Series.
