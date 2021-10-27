@@ -1,4 +1,4 @@
-Evento,Fecha,Jg,Eqp,Jc,Re,C,H,E,Vs,Jc,Re,C,H,E,Estadio,Hora,Duc.,inn
+Evento,Fecha,Jg,Eqp,Jc,Re,C,H,E,Eqp,Jc,Re,C,H,E,Estadio,Hora,Duc.,inn
 59SN Cl,2019-08-10,1,PRI,HC,G,4,8,2,GRA,VS,P,0,7,2,Capitán San Luis,14:00,2:40,8
 59SN Cl,2019-08-10,2,MTZ,VS,G,5,9,1,IJV,HC,P,1,3,2,Cristobal Labra,14:00,2:52,9
 59SN Cl,2019-08-10,3,CAV,VS,G,10,12,0,IND,HC,P,6,11,7,Latinoamericano,14:00,3:38,9
@@ -221,7 +221,7 @@ Evento,Fecha,Jg,Eqp,Jc,Re,C,H,E,Vs,Jc,Re,C,H,E,Estadio,Hora,Duc.,inn
 59SN Cl,2019-09-15,224,GRA,HC,G,4,10,0,IJV,VS,P,1,4,2,MártIrez de Barbados,14:00,3:03,9
 59SN Cl,2019-09-16,225,ART,HC,G,5,7,2,GTM,VS,P,1,4,2,26 de Julio Artemisa,14:00,3:00,9
 59SN Cl,2019-09-16,226,IND,HC,G,9,10,1,PRI,VS,P,8,14,2,Latinoamericano,14:00,3:36,9
-59SN Cl,2019-09-16,227,MAYHC,G,7,14,0,HOL,VS,P,2,9,1,Nelsón Fernández,14:00,3:00,9
+59SN Cl,2019-09-16,227,MAY,HC,G,7,14,0,HOL,VS,P,2,9,1,Nelsón Fernández,14:00,3:00,9
 59SN Cl,2019-09-16,228,LTU,VS,G,4,7,0,MTZ,HC,P,1,4,2,19 de Abril Jaguey Grande MAT,14:00,2:30,9
 59SN Cl,2019-09-16,229,CMG,VS,G,5,6,1,CFG,HC,P,3,11,2,5 de Septiembre,14:00,3:30,9
 59SN Cl,2019-09-16,230,SCU,VS,G,7,12,0,VCL,HC,P,1,7,0,Augusto César Sandino,14:00,3:00,9
@@ -253,7 +253,7 @@ Evento,Fecha,Jg,Eqp,Jc,Re,C,H,E,Vs,Jc,Re,C,H,E,Estadio,Hora,Duc.,inn
 59SN Cl,2019-09-21,250,MAY,HC,G,7,9,0,IND,VS,P,6,13,0,Nelsón Fernández,11:00,4:42,10
 59SN Cl,2019-09-21,260,SSP,HC,G,10,12,1,PRI,VS,P,0,3,1,José Antonio Huelga,11:30,1:50,5
 59SN Cl,2019-09-21,253,CFG,VS,G,11,11,2,CAV,HC,P,4,6,2,MártIrez de Chambas Chambas CAV,13:00,2:30,5
-59SN Cl,2019-09-21,259,MTZHC,G,2,5,0,HOL,VS,P,1,5,0,Victoria de Girón MTZ,13:00,2:30,7
+59SN Cl,2019-09-21,259,MTZ,HC,G,2,5,0,HOL,VS,P,1,5,0,Victoria de Girón MTZ,13:00,2:30,7
 59SN Cl,2019-09-21,257,ART,HC,G,4,8,1,SCU,VS,P,3,7,2,26 de Julio Artemisa,14:00,3:00,9
 59SN Cl,2019-09-21,258,IND,VS,G,6,6,0,MAY,HC,P,4,8,2,Nelsón Fernández,14:00,2:55,8
 59SN Cl,2019-09-21,262,CMG,HC,G,14,14,0,VCL,VS,P,1,9,2,Candido González,14:00,2:53,7
@@ -285,7 +285,7 @@ Evento,Fecha,Jg,Eqp,Jc,Re,C,H,E,Vs,Jc,Re,C,H,E,Estadio,Hora,Duc.,inn
 59SN Cl,2019-09-25,288,SCU,HC,G,7,14,2,GRA,VS,P,1,7,0,Guillermóm Moncada,14:00,3:21,9
 59SN Cl,2019-09-27,289,PRI,HC,G,4,7,2,MTZ,VS,P,1,10,0,Capitán San Luis,14:00,2:34,9
 59SN Cl,2019-09-27,290,HOL,VS,G,13,15,1,IJV,HC,P,0,3,3,Cristobal Labra,14:00,2:24,7
-59SN Cl,2019-09-27,291,CFGHC,G,10,16,0,SSP,VS,P,3,14,0,5 de Septiembre,14:00,4:05,9
+59SN Cl,2019-09-27,291,CFG,HC,G,10,16,0,SSP,VS,P,3,14,0,5 de Septiembre,14:00,4:05,9
 59SN Cl,2019-09-27,292,IND,VS,G,7,8,1,VCL,HC,P,3,7,2,Augusto César Sandino,14:00,3:00,9
 59SN Cl,2019-09-27,293,LTU,VS,G,5,7,0,CAV,HC,P,1,7,1,José Ramóm Cepero,14:00,2:45,9
 59SN Cl,2019-09-28,302,GRA,HC,G,4,6,0,ART,VS,P,2,9,1,Tirso Hidalgo Niquero GRA,10:00,2:40,7
@@ -317,7 +317,7 @@ Evento,Fecha,Jg,Eqp,Jc,Re,C,H,E,Vs,Jc,Re,C,H,E,Estadio,Hora,Duc.,inn
 59SN Cl,2019-10-02,315,MAY,HC,G,8,10,1,PRI,VS,P,1,3,1,Nelsón Fernández,13:00,2:11,6
 59SN Cl,2019-10-02,319,HOL,HC,G,9,13,0,SCU,VS,P,2,8,2,Calixto García  Iñiguez,13:00,2:20,7
 59SN Cl,2019-10-02,322,IJV,HC,G,4,10,0,IND,VS,P,1,5,0,Cristobal Labra,14:00,2:35,7
-59SN Cl,2019-10-02,324,MTZHC,G,12,13,1,VCL,VS,P,2,5,1,Victoria de Girón MTZ,14:00,2:40,8
+59SN Cl,2019-10-02,324,MTZ,HC,G,12,13,1,VCL,VS,P,2,5,1,Victoria de Girón MTZ,14:00,2:40,8
 59SN Cl,2019-10-02,325,CFG,HC,G,11,8,0,GRA,VS,P,5,8,1,5 de Septiembre,14:00,3:10,9
 59SN Cl,2019-10-02,326,LTU,VS,G,5,14,0,SSP,HC,P,2,11,0,José Antonio Huelga,14:00,3:15,9
 59SN Cl,2019-10-02,328,GTM,HC,G,10,12,2,CMG,VS,P,8,12,2,Geraldo Acosta Yateras GTM,14:00,3:20,9
