@@ -5,6 +5,7 @@ import numpy as np
 # Get data
 df = pd.read_csv('resumen-bos-scores.csv')
 tdf = pd.read_csv('teams.csv')
+hrdf = pd.read_csv('homeruns.csv')
 team_name = tdf['Team'].unique().tolist()
 
 # Title
@@ -24,13 +25,26 @@ stadiums = tdf[(tdf['Team']) == team_selector]['Stadium']
 team = team_id.iloc[0]
 stadium = stadiums.iloc[0]
 
+# Main data
 data = df[(df['Eqp'] == team) | (df['Eqp.1'] == team)]
+
+# Away | Visitador
 vs1 = df[(df['Eqp'] == team) & (df['Jc'] == 'VS')]
 vs2 = df[(df['Eqp.1'] == team) & (df['Jc.1'] == 'VS')]
 vs = len(vs1.index)+len(vs2.index)
+hrvs1 = hrdf[(hrdf['Eqp Po'] == team) & (~hrdf['Estadio'].str.contains(stadium, na=False))]
+hrvs2 = hrdf[(hrdf['Eqp Pe'] == team) & (~hrdf['Estadio'].str.contains(stadium, na=False))]
+hr_vs_po = str(len(hrvs1.index))
+hr_vs_pe = str(len(hrvs2.index))
+
+# Home Club | En cassa
 hc1 = df[(df['Eqp'] == team) & (df['Jc'] == 'HC')]
 hc2 = df[(df['Eqp.1'] == team) & (df['Jc.1'] == 'HC')]
 hc = len(hc1.index)+len(hc2.index)
+hrhc1 = hrdf[(hrdf['Eqp Po'] == team) & (hrdf['Estadio'].str.contains(stadium, na=False))]
+hrhc2 = hrdf[(hrdf['Eqp Pe'] == team) & (hrdf['Estadio'].str.contains(stadium, na=False))]
+hr_hc_po = str(len(hrhc1.index))
+hr_hc_pe = str(len(hrhc2.index))
 
 # Home Club dataframes
 win_hc_df = df[(df['Eqp'] == team) & (df['Jc'] == 'HC') & (df['Re'] == 'G')]
@@ -104,8 +118,17 @@ vs_result = vs_result.drop(['Jc'], axis=1)
 vs_result['Re'].fillna('Total', inplace = True)
 vs_result.set_index('Re', inplace=True)
 
+hr_vs_po = str(len(hrvs1.index))
+hr_vs_pe = str(len(hrvs2.index))
+hr_hc_po = str(len(hrhc1.index))
+hr_hc_pe = str(len(hrhc2.index))
+
+hr_summary = [{'HR HC PO': hr_hc_po, 'HR HC PE': hr_hc_pe, 'HR VS PO': hr_vs_po, 'HR VS PE': hr_vs_pe}]
+hr_data_frame = pd.DataFrame(hr_summary)
+
 # Setting layout
 l_col, r_col = st.columns([2,9])
+l_md6, r_md6 = st.columns([6,6])
 
 # Display data
 with l_col:
@@ -118,10 +141,15 @@ with r_col:
     st.text('Home Club: ' + str(hc))
     st.text('Visitador: ' + str(vs))
 
-st.subheader("Win/Lost playing Away.")
-st.table(vs_result)
+with  l_md6:
+    st.subheader("Win/Lost playing Away.")
+    st.table(vs_result)
 
-st.subheader("Win/Lost playing as Home Club")
-st.table(hc_result)
+    st.subheader("Win/Lost playing as Home Club")
+    st.table(hc_result)
 
-#st.dataframe(data)
+with r_md6:
+    st.subheader("Homeruns Away/HomeClub")
+    st.table(hr_data_frame)
+
+#st.dataframe(hrvs1)
