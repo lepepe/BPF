@@ -199,10 +199,10 @@ vs_result_allowed = vs_result_allowed.drop(['Jc'], axis=1)
 vs_result_allowed['Re'].fillna('Total', inplace = True)
 vs_result_allowed.set_index('Re', inplace=True)
 
-hr_vs_po = str(len(hrvs1.index))
-hr_vs_pe = str(len(hrvs2.index))
-hr_hc_po = str(len(hrhc1.index))
-hr_hc_pe = str(len(hrhc2.index))
+hr_vs_po = int(str(len(hrvs1.index)))
+hr_vs_pe = int(str(len(hrvs2.index)))
+hr_hc_po = int(str(len(hrhc1.index)))
+hr_hc_pe = int(str(len(hrhc2.index)))
 
 hr_summary = [{'HR HC PO': hr_hc_po, 'HR HC PE': hr_hc_pe, 'HR VS PO': hr_vs_po, 'HR VS PE': hr_vs_pe}]
 hr_data_frame = pd.DataFrame(hr_summary)
@@ -225,6 +225,18 @@ with m_col:
 with r_col:
     st.subheader("Homeruns Away/HomeClub")
     st.table(hr_data_frame)
+
+    #FP= ((Rhome+RAhome)/Ghome) / ((Raway+RAaway)/Gaway
+    runs_awarded_home_club = hc_result.iloc[2]['C']
+    runs_allowed_home_club = hc_result_allowed.iloc[2]['C']
+    runs_awarded_away = vs_result.iloc[2]['C']
+    runs_allowed_away = vs_result_allowed.iloc[2]['C']
+
+    bpf_runs = ((runs_awarded_home_club+runs_allowed_home_club)/hc) / ((runs_awarded_away+runs_allowed_away)/vs)
+    bpf_hr = ((hr_hc_po+hr_hc_pe)/hc) / ((hr_vs_po+hr_vs_pe)/vs)
+
+    st.info('Batting Park Factor (Runs): ' + str(round(bpf_runs, 4)) )
+    st.info('Batting Park Factor (Homeruns): ' + str(round(bpf_hr, 4)) )
 
 with  l_md6:
     st.subheader("Win/Lost playing away awarded.")
